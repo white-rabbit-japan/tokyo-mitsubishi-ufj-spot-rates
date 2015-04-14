@@ -33,11 +33,14 @@ if (Meteor.isServer) {
         res = res.slice(0, res.indexOf('\n'));
         var rates = res.split(',');
 
-        forex.usdRates.push({'ttSell': _extractFloat(rates[1])});
-        forex.usdRates.push({'ttBuy': _extractFloat(rates[4])});
-        forex.usdRates.push({'cashBuy': _extractFloat(rates[7])});
-        forex.usdRates.push({'cashSell': _extractFloat(rates[3])});
-        forex.usdRates.push({'atSight': _extractFloat(rates[5])});
+        forex.usdRates.push({
+          'ttBuy': _extractFloat(rates[4]) * 100,
+          'cashBuy': _extractFloat(rates[7])* 100,
+          'cashSell': _extractFloat(rates[3])* 100,
+          'atSight': _extractFloat(rates[5])* 100,
+          'ttSell': _extractFloat(rates[1])* 100,
+        });
+
 
         console.log(forex);
 

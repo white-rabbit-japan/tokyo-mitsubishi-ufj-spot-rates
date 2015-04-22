@@ -8,16 +8,20 @@ USD only for now.
 
 ```
 {
-    "base": "JPY",
-    "updatedAt": "2015-04-22T01:39:00.000Z",
-    "usdRates": [
+    "base" : "JPY",
+    "updatedAt" : ISODate("2015-04-22T01:39:00.000Z"),
+    "currencies" : [ 
         {
-            "ttBuy": 11866,
-            "cashBuy": 11666,
-            "cashSell": 12246,
-            "atSight": 11849,
-            "ttSell": 12066
+            "currency" : "USD",
+            "rates" : {
+                "ttBuy" : 11866,
+                "cashBuy" : 11666,
+                "cashSell" : 12246,
+                "atSight" : 11849,
+                "ttSell" : 12066
+            }
         }
-    ]
+    ],
+    "createdAt" : ISODate("2015-04-22T09:25:23.846Z")
 }
 ```

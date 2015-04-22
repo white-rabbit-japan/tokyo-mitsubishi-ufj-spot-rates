@@ -1,6 +1,6 @@
 Package.describe({
   name: 'whiterabbit:tokyo-mitsubishi-ufj-spot-rates',
-  version: '0.0.1',
+  version: '0.1.0',
   summary: 'Returns forex spot rates from Bank of Tokyo Mitsubishi UFJ. USD only for now.',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/white-rabbit-japan/tokyo-mitsubishi-ufj-spot-rates.git',
@@ -11,11 +11,9 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.5');
-  api.addFiles('tokyo-mitsubishi-ufj-spot-rates.js');
+  api.addFiles('tokyo-mitsubishi-ufj-spot-rates.js', 'server');
 });
 
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('whiterabbit:tokyo-mitsubishi-ufj-spot-rates');
-  api.addFiles('tokyo-mitsubishi-ufj-spot-rates-tests.js');
-});
+
+
+

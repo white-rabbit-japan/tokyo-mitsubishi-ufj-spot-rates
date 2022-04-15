@@ -26,11 +26,11 @@ Meteor.methods({
       currencies: [{
         currency: 'USD',
         rates: {
-          'ttBuy': _extractFloat(rates[4]) * 100,
-          'cashBuy': _extractFloat(rates[7]) * 100,
-          'cashSell': _extractFloat(rates[3]) * 100,
-          'atSight': _extractFloat(rates[5]) * 100,
-          'ttSell': _extractFloat(rates[1]) * 100,
+          'ttBuy': Math.round(_extractFloat(rates[4]) * 100),
+          'cashBuy': Math.round(_extractFloat(rates[7]) * 100),
+          'cashSell': Math.round(_extractFloat(rates[3]) * 100),
+          'atSight': Math.round(_extractFloat(rates[5]) * 100),
+          'ttSell': Math.round(_extractFloat(rates[1]) * 100),
         },
       }],
     };
